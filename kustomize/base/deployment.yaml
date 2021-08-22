@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
       - name: hello-world
-        image: nginx:latest
+        image: app
         ports:
         - containerPort: 80
         livenessProbe:
