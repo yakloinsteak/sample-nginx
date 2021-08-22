@@ -1,0 +1,4 @@
+HASH=$(git rev-parse HEAD)
+docker build . -t registry.digitalocean.com/top-secret/app:$HASH
+doctl registry login
+docker push registry.digitalocean.com/top-secret/app:$HASH
