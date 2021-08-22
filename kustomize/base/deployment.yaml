@@ -1,11 +1,11 @@
-apiVersion: apps/v1
+RpiVersion: apps/v1
 kind: Deployment
 metadata:
   name: hello-world
   labels:
     app: hello-world
 spec:
-  replicas: 3
+  replicas: 1
   selector:
     matchLabels:
       app: hello-world
