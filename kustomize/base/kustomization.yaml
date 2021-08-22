@@ -6,4 +6,4 @@ resources:
 images:
 - name: app
   newName: registry.digitalocean.com/top-secret/app
-  newTag: blackman-1629658483
+  newTag: blackman-1629658751
