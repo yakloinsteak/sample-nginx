@@ -1,21 +1,21 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: hello-world
+  name: top-secret
   labels:
-    app: hello-world
+    app: top-secret
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: hello-world
+      app: top-secret
   template:
     metadata:
       labels:
-        app: hello-world
+        app: top-secret
     spec:
       containers:
-      - name: hello-world
+      - name: top-secret
         image: app
         ports:
         - containerPort: 80
