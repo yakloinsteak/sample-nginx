@@ -1,5 +1,5 @@
 # TODO: find something that doesn't change when the code doesn't change
-VERSION=${USER}-$(date +"%s")
+export VERSION=${USER}-$(date +"%s")
 
 envsubst \
   < kustomize/base/kustomization.template.yaml \
