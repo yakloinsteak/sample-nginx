@@ -2,12 +2,17 @@
 VERSION=${USER}-$(date +"%s")
 
 envsubst \
-  < kustomize/base/kustomization.template.yaml
+  < kustomize/base/kustomization.template.yaml \
   > kustomize/base/kustomization.yaml
 
 git add kustomize/base/kustomization.yaml
 git commit -m "Version bump to ${VERSION}"
 
 docker build . -t registry.digitalocean.com/top-secret/app:$VERSION
+
+echo push image
 doctl registry login
 docker push registry.digitalocean.com/top-secret/app:$VERSION
+
+echo deploy via pushing to git
+git push origin

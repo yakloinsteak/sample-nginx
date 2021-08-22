@@ -6,4 +6,4 @@ resources:
 images:
 - name: app
   newName: registry.digitalocean.com/top-secret/app
-  newTag: version-$VERSION
+  newTag: version-${VERSION}
