@@ -3,4 +3,4 @@ kind: Kustomization
 resources:
 - ../../base
 - ingress.yaml
-namespace: top-secret-production
+namespace: sample-nginx-production

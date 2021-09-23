@@ -1,7 +1,7 @@
 apiVersion: networking.k8s.io/v1
 kind: Ingress
 metadata:
-  name: top-secret
+  name: sample-nginx
   annotations:
     ingress.kubernetes.io/ssl-redirect: "false"
     ingress.kubernetes.io/rewrite-target: /
@@ -13,7 +13,7 @@ spec:
         pathType: ImplementationSpecific
         backend:
           service:
-           name: top-secret
+           name: sample-nginx
            port:
              number: 80
 
